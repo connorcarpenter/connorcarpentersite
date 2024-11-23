@@ -1,0 +1,18 @@
+[package]
+name = "session_server_http_proto"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../../.."
+edition = "2021"
+publish = false
+
+[features]
+
+[dependencies]
+asset_id = { path = "../../../crates/asset/id" }
+auth_server_types = { path = "../../auth/types" }
+social_server_types = { path = "../../social/types" }
+
+naia-serde = { path = "../../../../naia/shared/serde" }
+
+bevy_http_shared = { path = "../../../crates/http/bevy_http_shared" }

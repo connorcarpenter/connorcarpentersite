@@ -1,0 +1,21 @@
+[package]
+name = "session_server_naia_proto"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../../.."
+edition = "2021"
+publish = false
+
+[features]
+local = []
+prod = []
+
+[dependencies]
+naia-bevy-shared = { path = "../../../../naia/adapters/bevy/shared" }
+asset_id = { path = "../../../crates/asset/id" }
+logging = { path = "../../../crates/logging" }
+social_server_types = { path = "../../social/types" }
+
+bevy_ecs = { version = "0.14", default-features=false }
+
+cfg-if = { version = "1.0" }

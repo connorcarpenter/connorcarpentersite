@@ -1,2 +1,3 @@
-# connorcarpentersite
-eventually will host all code related to connorcarpenter.com
+![](https://tokei.rs/b1/github/connorcarpenter/connorcarpentersite)
+
+# connorcarpenter.com

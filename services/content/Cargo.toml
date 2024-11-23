@@ -1,0 +1,26 @@
+[package]
+name = "content_server"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../.."
+edition = "2021"
+publish = false
+
+[features]
+local = [ "config/local" ]
+prod = [ "config/prod" ]
+nodeploy = []
+
+[dependencies]
+http_server = { path = "../../crates/http/http_server" }
+http_client = { path = "../../crates/http/http_client" }
+config = { path = "../../config", features = ["content"] }
+automation_lib = { path = "../../automation/lib" }
+asset_id = { path = "../../crates/asset/id" }
+logging = { path = "../../crates/logging" }
+naia-serde = { path = "../../../naia/shared/serde" }
+filecache = { path = "../../crates/filecache" }
+
+cfg-if = { version = "1.0" }
+serde = { version = "1.0.189", features = ["derive"] }
+serde_json = { version = "1.0.107" }

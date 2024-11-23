@@ -1,0 +1,21 @@
+[package]
+name = "redirector"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../.."
+edition = "2021"
+publish = false
+
+[features]
+# even though this should always be the case (no reason for this on local)
+# keep it around because automation requires it and I don't want to write
+# a special case for this!
+prod = []
+
+[dependencies]
+config = { path = "../../config", features = ["redirector", "prod"]}
+logging = { path = "../../crates/logging" }
+executor = { path = "../../crates/executor" }
+http_server = { path = "../../crates/http/http_server" }
+http_server_shared = { path = "../../crates/http/http_server_shared" }
+http_common = { path = "../../crates/http/http_common" }

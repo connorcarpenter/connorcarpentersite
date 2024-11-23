@@ -1,0 +1,27 @@
+[package]
+name = "config"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = ".."
+edition = "2021"
+publish = false
+
+[features]
+local = []
+prod = []
+client = []
+gateway = []
+region = []
+session = []
+world = []
+content = []
+asset = []
+auth = []
+redirector = []
+social = []
+odst = []
+
+[dependencies]
+logging = { path = "../crates/logging" }
+
+cfg-if = { version = "1.0" }

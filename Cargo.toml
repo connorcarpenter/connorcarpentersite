@@ -1,0 +1,160 @@
+[workspace]
+resolver = "2"
+# all crates should be listed here
+members = [
+
+    ### Config ###
+    "config",
+
+    ### Deployments ###
+    # Standalone [Native]
+    "apps/deployments/native",
+    # Standalone [Native] ODST-mode
+    "apps/deployments/odst",
+    # Launcher [Web]
+    "apps/deployments/web/launcher",
+    # Game [Web]
+    "apps/deployments/web/game",
+    # Level Editor [Web]
+    "apps/deployments/web/level_editor",
+
+    ### Apps ###
+    # Launcher
+    "apps/launcher",
+    # Game
+    "apps/game",
+    "apps/game/main_menu",
+    "apps/game/inworld",
+    "apps/game/common",
+
+    ### Services ###
+    # Redirector Server
+    "services/redirector",
+    # Gateway Server
+    "services/gateway",
+    "services/gateway/http_proto",
+    # Content Server
+    "services/content",
+    # Auth Server
+    "services/auth",
+    "services/auth/http_proto",
+    "services/auth/db",
+    "services/auth/types",
+    # Region Server
+    "services/region",
+    "services/region/http_proto",
+    # Session Server
+    "services/session",
+    "services/session/http_proto",
+    "services/session/naia_proto",
+    # World Server
+    "services/world",
+    "services/world/http_proto",
+    "services/world/naia_proto",
+    # Asset Server
+    "services/asset",
+    "services/asset/http_proto",
+    # Social Server
+    "services/social",
+    "services/social/http_proto",
+    "services/social/types",
+
+    ### Tools ###
+    # Automation CLI / Library
+    "automation/cli",
+    "automation/lib",
+    "automation/crates/vultr",
+    # Asset Editor
+    "apps/editor/client",
+    "apps/editor/server/proto",
+    "apps/editor/server",
+    # Ui Editor
+    "apps/ui_editor",
+    # Gameplay Config Editor
+    "apps/spec_editor",
+
+    ### Crates ###
+    # Engine
+    "crates/engine",
+    # Math
+    "crates/math",
+    # Input
+    "crates/input",
+    # In-Memory Storage Types .. possibly useless
+    "crates/storage",
+    # Filecache
+    "crates/filecache",
+    # Filesystem
+    "crates/filesystem",
+    # DB
+    "crates/db",
+    # Git
+    "crates/git",
+    # Logging
+    "crates/logging",
+    # Cryptography
+    "crates/crypto",
+    # Random
+    "crates/random",
+    # TimeQueue
+    "crates/timequeue",
+    # Time
+    "crates/instant",
+    # Kernel
+    "crates/kernel",
+    # Clipboard
+    "crates/clipboard",
+    # Email
+    "crates/email",
+    # Multithreading / Executor
+    "crates/executor",
+    # Rendering
+    "crates/render/render_api",
+    "crates/render/render_gl",
+    "crates/render/render_egui",
+    "crates/render/gl",
+    "crates/render/egui_gl",
+    # Assets
+    "crates/asset/serde",
+    "crates/asset/loader",
+    "crates/asset/render",
+    "crates/asset/id",
+    # Http
+    "crates/http/bevy_http_client",
+    "crates/http/bevy_http_server",
+    "crates/http/bevy_http_shared",
+    "crates/http/http_server",
+    "crates/http/http_server_shared",
+    "crates/http/http_client",
+    "crates/http/http_common",
+    "crates/http/http_client_shared",
+    "crates/http/acme",
+    "crates/http/acme/cert_db",
+    # Spec
+    "crates/spec",
+    "crates/spec/serde",
+    # UI
+    "crates/ui/builder",
+    "crates/ui/layout",
+    "crates/ui/runner/render",
+    "crates/ui/builder/config",
+    "crates/ui/runner",
+    "crates/ui/runner/state",
+    "crates/ui/runner/input",
+    "crates/ui/runner/config",
+    "crates/ui/serde",
+    "crates/ui/extensions",
+]
+# any crates with conflicting dependencies / feature flags cannot be put here
+default-members = []
+
+[profile.release]
+opt-level = 's'
+lto = true
+
+[profile.dev]
+opt-level = 1
+debug-assertions = false
+
+[profile.dev.package."*"]
+opt-level = 1

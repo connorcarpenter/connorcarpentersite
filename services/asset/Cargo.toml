@@ -1,0 +1,27 @@
+[package]
+name = "asset_server"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../.."
+edition = "2021"
+publish = false
+
+[features]
+local = [ "config/local", "automation_lib", "region_server_http_proto/local" ]
+prod = [ "config/prod", "region_server_http_proto/prod" ]
+
+[dependencies]
+http_server = { path = "../../crates/http/http_server" }
+http_client = { path = "../../crates/http/http_client" }
+config = { path = "../../config", features = ["asset"] }
+asset_serde = { path = "../../crates/asset/serde", features = ["read_json"] }
+asset_id = { path = "../../crates/asset/id" }
+logging = { path = "../../crates/logging" }
+filecache = { path = "../../crates/filecache" }
+automation_lib = { path = "../../automation/lib", optional = true }
+
+asset_server_http_proto = { path = "http_proto" }
+region_server_http_proto = { path = "../region/http_proto" }
+
+cfg-if = { version = "1.0" }
+

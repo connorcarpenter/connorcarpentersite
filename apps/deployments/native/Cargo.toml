@@ -1,0 +1,30 @@
+[package]
+name = "standalone_native_deploy"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../../.."
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "standalone"
+path = "src/main.rs"
+
+[features]
+local = [ "launcher_app/local", "config/local" ]
+prod = [ "launcher_app/prod", "config/prod" ]
+gl_renderer = [ "launcher_app/gl_renderer", "game_app/gl_renderer" ]
+wgpu_renderer = [ "launcher_app/wgpu_renderer", "game_app/wgpu_renderer" ]
+
+[dependencies]
+# should only be kernel & apps here
+kernel = { path = "../../../crates/kernel" }
+logging = { path = "../../../crates/logging" }
+http_common = { path = "../../../crates/http/http_common" }
+config = { path = "../../../config", features = ["client"] }
+
+launcher_app = { path = "../../../apps/launcher" }
+game_app = { path = "../../../apps/game", features = ["no_odst"] }
+
+# others
+cfg-if = { version = "1.0" }
