@@ -13,9 +13,9 @@ publish = false
 prod = []
 
 [dependencies]
-config = { path = "../../config", features = ["redirector", "prod"]}
-logging = { path = "../../crates/logging" }
-executor = { path = "../../crates/executor" }
-http_server = { path = "../../crates/http/http_server" }
-http_server_shared = { path = "../../crates/http/http_server_shared" }
-http_common = { path = "../../crates/http/http_common" }
+connorcarpentersite_config = { path = "../../config", features = ["redirector", "prod"]}
+logging = { path = "../../../cyberlith/crates/logging" }
+executor = { path = "../../../cyberlith/crates/executor" }
+http_server = { path = "../../../cyberlith/crates/http/http_server" }
+http_server_shared = { path = "../../../cyberlith/crates/http/http_server_shared" }
+http_common = { path = "../../../cyberlith/crates/http/http_common" }

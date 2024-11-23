@@ -9,6 +9,6 @@ publish = false
 [features]
 
 [dependencies]
-logging = { path = "../../crates/logging" }
+logging = { path = "../../../cyberlith/crates/logging" }
 automation_lib = { path = "../lib" }
 clap = { version = "4.4" }

@@ -7,17 +7,17 @@ edition = "2021"
 publish = false
 
 [features]
-local = [ "config/local", "automation_lib", "region_server_http_proto/local" ]
-prod = [ "config/prod", "region_server_http_proto/prod" ]
+local = [ "connorcarpentersite_config/local", "automation_lib", "region_server_http_proto/local" ]
+prod = [ "connorcarpentersite_config/prod", "region_server_http_proto/prod" ]
 
 [dependencies]
-http_server = { path = "../../crates/http/http_server" }
-http_client = { path = "../../crates/http/http_client" }
-config = { path = "../../config", features = ["asset"] }
-asset_serde = { path = "../../crates/asset/serde", features = ["read_json"] }
-asset_id = { path = "../../crates/asset/id" }
-logging = { path = "../../crates/logging" }
-filecache = { path = "../../crates/filecache" }
+http_server = { path = "../../../cyberlith/crates/http/http_server" }
+http_client = { path = "../../../cyberlith/crates/http/http_client" }
+connorcarpentersite_config = { path = "../../config", features = ["asset"] }
+asset_serde = { path = "../../../cyberlith/crates/asset/serde", features = ["read_json"] }
+asset_id = { path = "../../../cyberlith/crates/asset/id" }
+logging = { path = "../../../cyberlith/crates/logging" }
+filecache = { path = "../../../cyberlith/crates/filecache" }
 automation_lib = { path = "../../automation/lib", optional = true }
 
 asset_server_http_proto = { path = "http_proto" }

@@ -32,12 +32,4 @@ node_modules
 /services/content/files/
 /services/content/files/*
 
-/apps/ui_editor/assets
-/apps/ui_editor/output
-/apps/spec_editor/assets
-/apps/spec_editor/output
-
-/apps/editor/client/target
-/apps/editor/server/users
-
 /crates/kernel/cookies_test

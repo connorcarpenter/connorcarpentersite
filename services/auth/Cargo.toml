@@ -1,0 +1,27 @@
+[package]
+name = "auth_server"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../.."
+edition = "2021"
+publish = false
+
+[features]
+local = [ "connorcarpentersite_config/local" ]
+prod = [ "connorcarpentersite_config/prod" ]
+
+[dependencies]
+http_server = { path = "../../../cyberlith/crates/http/http_server" }
+http_client = { path = "../../../cyberlith/crates/http/http_client" }
+crypto = { path = "../../../cyberlith/crates/crypto" }
+connorcarpentersite_config = { path = "../../config", features = ["auth"] }
+random = { path = "../../../cyberlith/crates/random" }
+email = { path = "../../../cyberlith/crates/email" }
+logging = { path = "../../../cyberlith/crates/logging" }
+timequeue = { path = "../../../cyberlith/crates/timequeue" }
+instant = { path = "../../../cyberlith/crates/instant" }
+validation = { path = "../../../cyberlith/crates/validation" }
+
+auth_server_http_proto = { path = "http_proto" }
+auth_server_db = { path = "db" }
+auth_server_types = { path = "types" }

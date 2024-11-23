@@ -1,0 +1,5 @@
+{username},
+
+please click the link to activate your account:
+
+{link}

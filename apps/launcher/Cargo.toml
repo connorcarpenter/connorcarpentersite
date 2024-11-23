@@ -15,7 +15,7 @@ wgpu_renderer = [ "game_engine/wgpu_renderer" ]
 [dependencies]
 # Internal
 # goal is to have ONLY game_engine here!!!
-game_engine = { path = "../../crates/engine" }
+game_engine = { path = "../../../cyberlith/crates/engine" }
 
 gateway_http_proto = { path = "../../services/gateway/http_proto" }
 

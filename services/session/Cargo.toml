@@ -7,19 +7,19 @@ edition = "2021"
 publish = false
 
 [features]
-local = [ "config/local", "session_server_naia_proto/local" ]
-prod = [ "config/prod", "session_server_naia_proto/prod" ]
-odst = [ "config/odst" ]
+local = [ "connorcarpentersite_config/local", "session_server_naia_proto/local" ]
+prod = [ "connorcarpentersite_config/prod", "session_server_naia_proto/prod" ]
+odst = [ "connorcarpentersite_config/odst" ]
 
 [dependencies]
 naia-bevy-server = { path = "../../../naia/adapters/bevy/server", features = [ "transport_webrtc" ] }
-bevy_http_server = { path = "../../crates/http/bevy_http_server" }
-bevy_http_client = { path = "../../crates/http/bevy_http_client" }
-config = { path = "../../config", features = ["session"] }
-crypto = { path = "../../crates/crypto" }
-asset_id = { path = "../../crates/asset/id" }
-random = { path = "../../crates/random" }
-logging = { path = "../../crates/logging" }
+bevy_http_server = { path = "../../../cyberlith/crates/http/bevy_http_server" }
+bevy_http_client = { path = "../../../cyberlith/crates/http/bevy_http_client" }
+connorcarpentersite_config = { path = "../../config", features = ["session"] }
+crypto = { path = "../../../cyberlith/crates/crypto" }
+asset_id = { path = "../../../cyberlith/crates/asset/id" }
+random = { path = "../../../cyberlith/crates/random" }
+logging = { path = "../../../cyberlith/crates/logging" }
 auth_server_types = { path = "../auth/types" }
 social_server_types = { path = "../social/types" }
 

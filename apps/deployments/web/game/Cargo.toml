@@ -12,16 +12,16 @@ path = "src/lib.rs"
 crate-type = ["cdylib", "rlib"]
 
 [features]
-local = [ "game_app/local", "config/local" ]
-prod = [ "game_app/prod", "config/prod" ]
+local = [ "game_app/local", "connorcarpentersite_config/local" ]
+prod = [ "game_app/prod", "connorcarpentersite_config/prod" ]
 gl_renderer = [ "game_app/gl_renderer" ]
 wgpu_renderer = [ "game_app/wgpu_renderer" ]
 
 [dependencies]
-kernel = { path = "../../../../crates/kernel" }
-logging = { path = "../../../../crates/logging" }
+kernel = { path = "../../../../../cyberlith/crates/kernel" }
+logging = { path = "../../../../../cyberlith/crates/logging" }
 game_app = { path = "../../../game", features = ["no_odst"] }
-config = { path = "../../../../config", features = ["client"] }
+connorcarpentersite_config = { path = "../../../../config", features = ["client"] }
 
 cfg-if = { version = "1.0" }
 

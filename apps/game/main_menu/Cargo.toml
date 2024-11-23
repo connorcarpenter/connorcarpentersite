@@ -16,7 +16,7 @@ no_odst = [ ]
 [dependencies]
 # Internal
 # goal is to have ONLY game_engine here!!!
-game_engine = { path = "../../../crates/engine", features = ["networked"] }
+game_engine = { path = "../../../../cyberlith/crates/engine", features = ["networked"] }
 
 game_app_common =  { path = "../common" }
 

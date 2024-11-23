@@ -1,0 +1,18 @@
+[package]
+name = "auth_server_db"
+version = "0.1.0"
+authors = ["connorcarpenter <connorcarpenter@gmail.com>"]
+workspace = "../../.."
+edition = "2021"
+publish = false
+
+[features]
+
+[dependencies]
+db = { path = "../../../../cyberlith/crates/db" }
+crypto = { path = "../../../../cyberlith/crates/crypto" }
+auth_server_types = { path = "../types" }
+
+serde = { version = "1.0.189", features = ["derive"] }
+serde_json = { version = "1.0.107" }
+chrono = { version = "0.4", features = ["serde"] }

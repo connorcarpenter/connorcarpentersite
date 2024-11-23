@@ -10,5 +10,5 @@ publish = false
 
 [dependencies]
 naia-serde = { path = "../../../../naia/shared/serde" }
-http_common = { path = "../../../crates/http/http_common" }
-asset_id = { path = "../../../crates/asset/id" }
+http_common = { path = "../../../../cyberlith/crates/http/http_common" }
+asset_id = { path = "../../../../cyberlith/crates/asset/id" }

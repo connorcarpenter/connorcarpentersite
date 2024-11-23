@@ -1,0 +1,16 @@
+pub(crate) enum AuthServerError {
+    EmailSendFailed(String),
+    InsertedDuplicateUserId,
+    UsernameAlreadyExists,
+    EmailAlreadyExists,
+    UsernameOrEmailNotFound,
+    EmailNotFound,
+    UserIdNotFound,
+    PasswordIncorrect,
+    TokenNotFound,
+    PasswordHashError,
+    UsernameInvalidCharacters,
+    EmailInvalidCharacters,
+    PasswordInvalidCharacters,
+    Unknown(String),
+}

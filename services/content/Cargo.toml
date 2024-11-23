@@ -7,19 +7,19 @@ edition = "2021"
 publish = false
 
 [features]
-local = [ "config/local" ]
-prod = [ "config/prod" ]
+local = [ "connorcarpentersite_config/local" ]
+prod = [ "connorcarpentersite_config/prod" ]
 nodeploy = []
 
 [dependencies]
-http_server = { path = "../../crates/http/http_server" }
-http_client = { path = "../../crates/http/http_client" }
-config = { path = "../../config", features = ["content"] }
+http_server = { path = "../../../cyberlith/crates/http/http_server" }
+http_client = { path = "../../../cyberlith/crates/http/http_client" }
+connorcarpentersite_config = { path = "../../config", features = ["content"] }
 automation_lib = { path = "../../automation/lib" }
-asset_id = { path = "../../crates/asset/id" }
-logging = { path = "../../crates/logging" }
+asset_id = { path = "../../../cyberlith/crates/asset/id" }
+logging = { path = "../../../cyberlith/crates/logging" }
 naia-serde = { path = "../../../naia/shared/serde" }
-filecache = { path = "../../crates/filecache" }
+filecache = { path = "../../../cyberlith/crates/filecache" }
 
 cfg-if = { version = "1.0" }
 serde = { version = "1.0.189", features = ["derive"] }

@@ -11,17 +11,17 @@ name = "standalone"
 path = "src/main.rs"
 
 [features]
-local = [ "launcher_app/local", "config/local" ]
-prod = [ "launcher_app/prod", "config/prod" ]
+local = [ "launcher_app/local", "connorcarpentersite_config/local" ]
+prod = [ "launcher_app/prod", "connorcarpentersite_config/prod" ]
 gl_renderer = [ "launcher_app/gl_renderer", "game_app/gl_renderer" ]
 wgpu_renderer = [ "launcher_app/wgpu_renderer", "game_app/wgpu_renderer" ]
 
 [dependencies]
 # should only be kernel & apps here
-kernel = { path = "../../../crates/kernel" }
-logging = { path = "../../../crates/logging" }
-http_common = { path = "../../../crates/http/http_common" }
-config = { path = "../../../config", features = ["client"] }
+kernel = { path = "../../../../cyberlith/crates/kernel" }
+logging = { path = "../../../../cyberlith/crates/logging" }
+http_common = { path = "../../../../cyberlith/crates/http/http_common" }
+connorcarpentersite_config = { path = "../../../config", features = ["client"] }
 
 launcher_app = { path = "../../../apps/launcher" }
 game_app = { path = "../../../apps/game", features = ["no_odst"] }

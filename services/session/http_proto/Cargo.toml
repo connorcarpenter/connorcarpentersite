@@ -9,10 +9,10 @@ publish = false
 [features]
 
 [dependencies]
-asset_id = { path = "../../../crates/asset/id" }
+asset_id = { path = "../../../../cyberlith/crates/asset/id" }
 auth_server_types = { path = "../../auth/types" }
 social_server_types = { path = "../../social/types" }
 
 naia-serde = { path = "../../../../naia/shared/serde" }
 
-bevy_http_shared = { path = "../../../crates/http/bevy_http_shared" }
+bevy_http_shared = { path = "../../../../cyberlith/crates/http/bevy_http_shared" }

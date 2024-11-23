@@ -12,4 +12,4 @@ publish = false
 auth_server_types = { path = "../../auth/types" }
 social_server_types = { path = "../types" }
 naia-serde = { path = "../../../../naia/shared/serde" }
-http_common = { path = "../../../crates/http/http_common" }
+http_common = { path = "../../../../cyberlith/crates/http/http_common" }
